@@ -5,7 +5,9 @@ from tkinter.ttk import *
 
 
 root = Tk()
-canvas = Canvas(root, height = 700, width = 700, bg = "#212121")
+root.resizable(False, False)
+
+canvas = Canvas(root, height = 700, width = 820, bg = "#212121")
 
 art = """
 
@@ -19,8 +21,9 @@ art = """
 """
 
 style = Style()
-style.configure('Style.TButton', font='TkFixedFont', foreground="#dd2c00")
-Label(root,text=art, style='Style.TButton').pack()
+style.configure('Style.TButton', font='TkFixedFont', foreground="#dd2c00", bg="#212121")
+label = Label(root,text=art, style='Style.TButton').place(x = 0,y = 0)
+
 canvas.pack()
 
 #playing music
