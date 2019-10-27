@@ -3,12 +3,12 @@ from tkinter import *
 import os, winsound
 from tkinter.ttk import *
 
+bgVal = "#212121"
+fgVal = "#ffeb3b"
 
 root = Tk()
-root.resizable(False, False)
-
-
-canvas = Canvas(root, height = 700, width = 820, bg = "#212121")
+root.configure(background=bgVal, height = 700, width = 820)
+root.resizable(FALSE, FALSE)
 
 art = """
 
@@ -21,10 +21,8 @@ art = """
                       ▐        ▐                      ▐                                      ▐   ▐    
 """
 
-style = Style()
-style.configure('Style.TButton', font='TkFixedFont', foreground="#dd2c00")
-lab = Label(root,text=art, style='Style.TButton').place(x = 0,y = 0)
-canvas.pack()
+Label(root,text=art, font='TkFixedFont', background=bgVal, foreground=fgVal).place(x = 5,y = 0)
+
 
 
 #playing music
