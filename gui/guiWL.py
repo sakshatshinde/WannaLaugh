@@ -20,20 +20,27 @@ root.overrideredirect(True)
 def keyCatch():
     print(keyAccept.get())
 
-
+#button style
 style = Style()
 style.configure('TButton', font = ('TkFixedFont', 10, 'bold'), foreground = bgVal) 
 
+#Banner WannaLaugh
 Label(root,text=art, font='TkFixedFont', background=bgVal, foreground=fgVal).place(relx=.505, rely=.1, anchor="center")
 
+#Border design
 Label(root, text = borderScreen, font = 'TkFixedFont', background=bgVal, foreground= fgVal).place(relx=.5, rely=.5,anchor="center")
 
+#Enter the key TEXT
 Label(root, text=text, background=bgVal, foreground="#39A2AE", font = "TkFixedFont").place(relx=.5, rely=.45, anchor="center")
 
+#Music Logo
 Label(root,text=musiclLogo, font='TkFixedFont', background=bgVal, foreground="#55DBCB").place(relx=.24, rely=.9, anchor="center")
 
+#Accepting input : 
 keyAccept = Entry(root, font = 'TkFixedFont', foreground = "black", background = bgVal)
 keyAccept.place(relx=.5, rely=.52, anchor="center")
+
+#Button
 submitBtn = Button(root, text='Get your data back', command=keyCatch, style='TButton') 
 submitBtn.place(relx=.5, rely=.6, anchor="center")
 
