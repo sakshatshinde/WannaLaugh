@@ -10,15 +10,31 @@ root = Tk()
 root.configure(background=bgVal, height = 700, width = 820)
 root.resizable(FALSE, FALSE)    #resizing turned off
 
+
+#If the entered key is right this popUP msg will be triggered.
+#KEY CHECK HAS NOT BEEN IMPLEMENTED YET
+
+def popupmsg(msg):
+    popup = Tk()
+    popup.configure(background=bgVal, height = 200, width = 200)
+    popup.resizable(FALSE, FALSE)
+    popup.eval('tk::PlaceWindow %s center' % popup.winfo_pathname(popup.winfo_id()))
+    label = Label(popup, text=msg, font= ('TkFixedFont', 10, 'bold'),background=bgVal, foreground= fgVal)
+    label.pack(side="top", fill="x", pady=10)
+    B1 = Button(popup, text="Okay", font = ('TkFixedFont', 10, 'bold'), command = popup.destroy, background=fgVal, foreground=bgVal)
+    B1.pack()
+    popup.mainloop()
+
 #sets the window in center of the screen
 root.eval('tk::PlaceWindow %s center' % root.winfo_pathname(root.winfo_id()))
 
 #removes title bar and removes the ability to close the application from task bar
-root.overrideredirect(True)
+#root.overrideredirect(True)
 
 #accepting key
 def keyCatch():
     print(keyAccept.get())
+    popupmsg("Files will be extracted")
 
 #Banner WannaLaugh
 Label(root,text=art, font='TkFixedFont', background=bgVal, foreground=fgVal).place(relx=.505, rely=.13, anchor="center")
