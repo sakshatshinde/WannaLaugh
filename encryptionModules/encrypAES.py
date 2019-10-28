@@ -1,7 +1,7 @@
 import pyAesCrypt
 import os
 
-if if __name__ == "__main__":
+if __name__ == "__main__":
     
     # encryption/decryption buffer size - 64K
     bufferSize = 64 * 1024
