@@ -8,7 +8,7 @@ fgVal = "#D2BF55"
 
 root = Tk()
 root.configure(background=bgVal, height = 700, width = 820)
-#root.resizable(FALSE, FALSE)    #resizing turned off
+root.resizable(FALSE, FALSE)    #resizing turned off
 
 #sets the window in center of the screen
 root.eval('tk::PlaceWindow %s center' % root.winfo_pathname(root.winfo_id()))
