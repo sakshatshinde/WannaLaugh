@@ -1,10 +1,9 @@
 
 from tkinter import *
 import os, winsound
-from tkinter.ttk import *
 from asciiArt import *
 
-bgVal = "#2B061E"
+bgVal = "#000000"
 fgVal = "#D2BF55"
 
 root = Tk()
@@ -15,18 +14,14 @@ root.resizable(FALSE, FALSE)    #resizing turned off
 root.eval('tk::PlaceWindow %s center' % root.winfo_pathname(root.winfo_id()))
 
 #removes title bar and removes the ability to close the application from task bar
-#root.overrideredirect(True)
-    
+root.overrideredirect(True)
+
 #accepting key
 def keyCatch():
     print(keyAccept.get())
 
-#button style
-style = Style()
-style.configure('TButton', font = ('TkFixedFont', 10, 'bold'), foreground = bgVal) 
-
 #Banner WannaLaugh
-Label(root,text=art, font='TkFixedFont', background=bgVal, foreground=fgVal).place(relx=.505, rely=.1, anchor="center")
+Label(root,text=art, font='TkFixedFont', background=bgVal, foreground=fgVal).place(relx=.505, rely=.13, anchor="center")
 
 #Border design
 Label(root, text = borderScreen, font = 'TkFixedFont', background=bgVal, foreground= fgVal).place(relx=.5, rely=.5,anchor="center")
@@ -35,16 +30,20 @@ Label(root, text = borderScreen, font = 'TkFixedFont', background=bgVal, foregro
 Label(root, text=text, background=bgVal, foreground="#55DBCB", font = "TkFixedFont").place(relx=.5, rely=.45, anchor="center")
 
 #Music Logo
-Label(root,text=musiclLogo, font='TkFixedFont', background=bgVal, foreground="#55DBCB").place(relx=.24, rely=.9, anchor="center")
+Label(root,text=musiclLogo, font='TkFixedFont', background=bgVal, foreground="#55DBCB").place(relx=.14, rely=.9, anchor="center")
 
 #Accepting input : 
-keyAccept = Entry(root, font = 'TkFixedFont', foreground = "black", background = bgVal)
-keyAccept.place(relx=.5, rely=.52, anchor="center")
+keyAccept = Entry(root, font = ('TkFixedFont', 10, 'bold'), foreground = "black", background = fgVal, borderwidth = 0, width = 50, justify = CENTER)
+keyAccept.place(relx=.5, rely=.54, anchor="center")
 
-#Button
-submitBtn = Button(root, text='Get your data back', command=keyCatch, style='TButton') 
+""" #Button
+submitBtn = Button(root, text="DATA RESTORE", font = ('TkFixedFont', 10, 'bold'), command=keyCatch, background="#55DBCB", foreground=bgVal, borderwidth = 0) 
 submitBtn.place(relx=.5, rely=.6, anchor="center")
+ """
 
+icon = PhotoImage(file = r"extras\open-data.png")
+submitBtn = Button(root, image = icon, font = ('TkFixedFont', 10, 'bold'), command=keyCatch, background=bgVal, foreground=bgVal, borderwidth = 0) 
+submitBtn.place(relx=.5, rely=.6, anchor="center")
 
 #playing music
 winsound.PlaySound('extras/Goosebumps Theme Song (Caspro Remix).wav', winsound.SND_ALIAS | winsound.SND_LOOP + winsound.SND_ASYNC)
