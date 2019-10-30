@@ -2,6 +2,7 @@
 from tkinter import *
 import os, winsound
 from asciiArt import *
+#using from tkinter.ttk  import * , breaks the button-background on windows. So removed the Style part for now
 
 if __name__ == "__main__":
     bgVal = "#000000"
@@ -57,7 +58,7 @@ if __name__ == "__main__":
     submitBtn = Button(root, text="DATA RESTORE", font = ('TkFixedFont', 10, 'bold'), command=keyCatch, background="#55DBCB", foreground=bgVal, borderwidth = 0) 
     submitBtn.place(relx=.5, rely=.6, anchor="center")
     """
-
+    #Button
     icon = PhotoImage(file = r"extras\open-data.png")
     submitBtn = Button(root, image = icon, font = ('TkFixedFont', 10, 'bold'), command=keyCatch, background=bgVal, foreground=bgVal, borderwidth = 0) 
     submitBtn.place(relx=.5, rely=.6, anchor="center")
