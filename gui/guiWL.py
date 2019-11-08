@@ -66,4 +66,4 @@ if __name__ == "__main__":
     #playing music
     winsound.PlaySound('extras/Goosebumps Theme Song (Caspro Remix).wav', winsound.SND_ALIAS | winsound.SND_LOOP + winsound.SND_ASYNC)
     root.mainloop()
-    #test
+    
