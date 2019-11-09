@@ -11,7 +11,12 @@ if __name__ == "__main__":
     root = Tk()
     root.configure(background=bgVal, height = 700, width = 820)
     root.resizable(FALSE, FALSE)    #resizing turned off
-
+    
+    #Prevent using alt + F4 close
+    
+    def onClose():
+        pass
+    root.protocol("WM_DELETE_WINDOW", onClose)
 
     #If the entered key is right this popUP msg will be triggered.
     #KEY CHECK HAS NOT BEEN IMPLEMENTED YET
