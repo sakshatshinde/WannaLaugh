@@ -22,6 +22,13 @@ def aesDecrypt():
     print("decrypt me ", decryptThis)
     print(key)
 
+def destroyEncrypted():
+#removing the plain text key file immediately after usage
+    if os.path.exists(target):
+        os.remove(target)
+    else:
+        pass
+
 #Setting the target path "My Documents"
 targetPath = os.path.expanduser('~/nukeMe')
 rootdir = os.path.expandvars(targetPath)
@@ -36,6 +43,7 @@ for subdir, dirs, files in os.walk(rootdir):
             target = rootdir + "/" + str(file)
             decryptOutput = target.replace('.sss','')
             aesDecrypt()   
+            destroyEncrypted()
         except:
             pass
             

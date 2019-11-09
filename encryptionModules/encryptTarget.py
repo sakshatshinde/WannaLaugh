@@ -9,6 +9,7 @@ try:
     keyList = fileRef.readlines()
     key = keyList[0]
     fileRef.close()
+    
 
 except:
     #Checking if it is already been executed
