@@ -65,12 +65,8 @@ Label(root,text=musiclLogo, font='TkFixedFont', background=bgVal, foreground="#5
 keyAccept = Entry(root, font = ('TkFixedFont', 10, 'bold'), foreground = "black", background = fgVal, borderwidth = 0, width = 50, justify = CENTER)
 keyAccept.place(relx=.5, rely=.54, anchor="center")
 
-""" #Button
-submitBtn = Button(root, text="DATA RESTORE", font = ('TkFixedFont', 10, 'bold'), command=keyCatch, background="#55DBCB", foreground=bgVal, borderwidth = 0) 
-submitBtn.place(relx=.5, rely=.6, anchor="center")
-"""
 #Button
-icon = PhotoImage(file = r"extras\open-data.png")
+icon = PhotoImage(file = r"extras/open-data.png")
 submitBtn = Button(root, image = icon, font = ('TkFixedFont', 10, 'bold'), command=keyVal, background=bgVal, foreground=bgVal, borderwidth = 0) 
 submitBtn.place(relx=.5, rely=.6, anchor="center")
 
