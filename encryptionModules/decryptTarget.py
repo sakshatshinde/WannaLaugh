@@ -1,19 +1,21 @@
 import pyAesCrypt
 import os
+#from WannaLaugh.gui.guiWL import keyVal
 
 # encryption/decryption buffer size - 64K
 bufferSize = 64 * 1024
 
 try:
-    fileRef = open("keys.txt", "r")
+    fileRef = open("userGivenKey.txt", "r")
     keyList = fileRef.readlines()
     key = keyList[0]
     fileRef.close()
 
 except:
+    pass
     #Checking if it is already been executed
-    print("Already nuked")
-    quit()
+    # print("Wrong key")
+    # quit()
 
 #decryption
 def aesDecrypt():
