@@ -34,7 +34,7 @@ def popupmsg(msg):
 root.eval('tk::PlaceWindow %s center' % root.winfo_pathname(root.winfo_id()))
 
 #removes title bar and removes the ability to close the application from task bar
-#root.overrideredirect(True)
+root.overrideredirect(True)
 
 #accepting key
 def keyCatch():
