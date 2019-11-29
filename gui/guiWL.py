@@ -34,7 +34,7 @@ def popupmsg(msg):
 root.eval('tk::PlaceWindow %s center' % root.winfo_pathname(root.winfo_id()))
 
 #removes title bar and removes the ability to close the application from task bar
-root.overrideredirect(True)
+#root.overrideredirect(True)
 
 #accepting key
 def keyCatch():
@@ -49,6 +49,8 @@ def keyVal():
     userFile.write(keyValue)
     userFile.close()
 
+def esc():
+    root.destroy()
 #Banner WannaLaugh
 Label(root,text=art, font='TkFixedFont', background=bgVal, foreground=fgVal).place(relx=.505, rely=.13, anchor="center")
 
@@ -69,6 +71,10 @@ keyAccept.place(relx=.5, rely=.54, anchor="center")
 icon = PhotoImage(file = r"extras/open-data.png")
 submitBtn = Button(root, image = icon, font = ('TkFixedFont', 10, 'bold'), command=keyVal, background=bgVal, foreground=bgVal, borderwidth = 0) 
 submitBtn.place(relx=.5, rely=.6, anchor="center")
+
+#Close button
+escBtn = Button(root, image = icon, font = ('TkFixedFont', 10, 'bold'), command=esc, background=bgVal, foreground=bgVal, borderwidth = 0) 
+escBtn.place(relx=.5, rely=.8, anchor="center")
 
 #playing music
 winsound.PlaySound('extras/Goosebumps Theme Song (Caspro Remix).wav', winsound.SND_ALIAS | winsound.SND_LOOP + winsound.SND_ASYNC)

