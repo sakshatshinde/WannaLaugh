@@ -21,7 +21,7 @@
 - Run **main.py**
 
 ## Result
-The files in the **nukeMe** folder would be encrypted. Then a window will pop up which you can't close easily
-copy the key from the key.txt file in the root folder of the project and then click the first button. **Nothing will happen**.
+The files in the **nukeMe** folder would be encrypted. Then a window will pop up which you can't close easily.
+Copy the key from the key.txt file in the root folder of the project and then click the first button. **Nothing will happen**.
 Now click the second button right below the first button. This will exit the window. 
 Check the files in the folder **nukeMe** they have been restored
