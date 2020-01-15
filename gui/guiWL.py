@@ -68,16 +68,17 @@ keyAccept = Entry(root, font = ('TkFixedFont', 10, 'bold'), foreground = "black"
 keyAccept.place(relx=.5, rely=.54, anchor="center")
 
 #Button
-icon = PhotoImage(file = r"extras/open-data.png")
+icon = PhotoImage(file = "extras\\open-data.png")
 submitBtn = Button(root, image = icon, font = ('TkFixedFont', 10, 'bold'), command=keyVal, background=bgVal, foreground=bgVal, borderwidth = 0) 
 submitBtn.place(relx=.5, rely=.6, anchor="center")
 
 #Close button
-escBtn = Button(root, image = icon, font = ('TkFixedFont', 10, 'bold'), command=esc, background=bgVal, foreground=bgVal, borderwidth = 0) 
+close = PhotoImage(file = "extras\\close.png").subsample(20,20)
+escBtn = Button(root, image = close, font = ('TkFixedFont', 10, 'bold'), command=esc, background=bgVal, foreground=bgVal, borderwidth = 0, activebackground = bgVal) 
 escBtn.place(relx=.5, rely=.8, anchor="center")
 
 #playing music
-winsound.PlaySound('extras/Goosebumps Theme Song (Caspro Remix).wav', winsound.SND_ALIAS | winsound.SND_LOOP + winsound.SND_ASYNC)
+winsound.PlaySound('extras\\Goosebumps Theme Song (Caspro Remix).wav', winsound.SND_ALIAS | winsound.SND_LOOP + winsound.SND_ASYNC)
 
 root.mainloop()
 

