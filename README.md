@@ -8,7 +8,17 @@
 ### Disclaimer
  Use this tool at your own risk. Author(s) is/are not responsible or liable if you damage your own computer or anyone else's. Follow all local, state,  federal, and international laws as it pertains to your geographic location. Do NOT use this tool maliciously as it is intended for educational purpose only.
 
-### **How to use this?** 
+### **How to use this**
+
+- Get the binary(exe) from [here](https://github.com/sakshatshinde/WannaLaugh/releases)
+- Make a file called "key.txt"
+- Enter an arbitrary "key" or any gibbrish really into the newly created file
+- Make a directory in your __C:\Users\[localUser]__ called ***nukeMe***
+- Check if the path looks like this : __C:\Users\[localUser]\nukeMe__
+- Make or copy some random files in there for testing purposes
+---
+
+### **How to use this via Python CLI** 
 
 - Install python 3.X (If you already have it skip this step)
 - Make a directory in your __C:\Users\[localUser]__ called ***nukeMe***
