@@ -1,3 +1,7 @@
+# NOTE
+# This has not been used in this project. We tried to implement AES ourselves. But using a premade solution
+# seemed fit for the task due to time limitations
+
 import random
 class Aes:
 # key 
